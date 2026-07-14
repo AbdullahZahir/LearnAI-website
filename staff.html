@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team — TheLearnAI Program</title>
+<meta name="description" content="Meet the team behind TheLearnAI Program — the founder and teachers bringing AI literacy to kids across North Jersey.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="index.html">
+      <img src="images/logo.png" alt="TheLearnAI Program logo">
+      <span>The<b>Learn</b><i>AI</i></span>
+    </a>
+    <button class="nav__toggle" aria-label="Open menu"><span></span></button>
+    <nav class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="staff.html" class="active">Our Team</a>
+      <a href="index.html#statistics">Statistics</a>
+      <a href="schedule.html">Schedule</a>
+      <span class="nav__cta"><a class="btn btn--sm" href="schedule.html">Schedule a lesson <span class="arrow">→</span></a></span>
+    </nav>
+  </div>
+</header>
+
+<!-- TITLEHEAD -->
+<section class="head" data-sparkles="9" style="padding:120px 0 90px">
+  <div class="head__photo" style="background-image:url('images/teach-robot.jpg')"></div>
+  <div class="head__wash" style="background:linear-gradient(180deg,rgba(242,239,255,.86),rgba(253,241,247,.9) 50%,rgba(251,250,255,.97))"></div>
+  <canvas class="constellation"></canvas>
+  <span class="blob b1"></span><span class="blob b2"></span>
+  <div class="wrap" style="text-align:center;position:relative">
+    <span class="eyebrow" style="justify-content:center">The people behind the program</span>
+    <h1 style="font-size:clamp(2.4rem,5vw,3.8rem);margin-top:14px">Meet the <span class="grad">team.</span></h1>
+    <p style="max-width:52ch;margin:16px auto 0;font-size:1.12rem;font-weight:500;color:var(--ink)">A small, dedicated crew of educators making artificial intelligence approachable for every kid we teach.</p>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="pad">
+  <div class="wrap">
+    <div class="team-grid">
+
+      <div class="member lead reveal">
+        <div class="member__frame">
+          <img src="images/staff-abdullah.jpg" alt="Abdullah Zahir">
+          <span class="badge">👑</span>
+        </div>
+        <h3>Abdullah Zahir</h3>
+        <div class="role founder">Founder &amp; Teacher</div>
+      </div>
+
+      <div class="member reveal d1">
+        <div class="member__frame">
+          <img src="images/staff-ellen.jpg" alt="Ellen Seo">
+          <span class="badge">✨</span>
+        </div>
+        <h3>Ellen Seo</h3>
+        <div class="role">Teacher</div>
+      </div>
+
+      <div class="member reveal d2">
+        <div class="member__frame">
+          <img src="images/staff-rayyan.jpg" alt="Rayyan Rahman">
+          <span class="badge">✨</span>
+        </div>
+        <h3>Rayyan Rahman</h3>
+        <div class="role">Teacher</div>
+      </div>
+
+      <div class="member reveal">
+        <div class="member__frame">
+          <img src="images/staff-mohammad.jpg" alt="Mohammad Mufassiruzzaman">
+          <span class="badge">✨</span>
+        </div>
+        <h3>Mohammad Mufassiruzzaman</h3>
+        <div class="role">Teacher</div>
+      </div>
+
+      <div class="member reveal d1">
+        <div class="member__frame">
+          <img src="images/staff-rahidul.jpg" alt="Rahidul Alam">
+          <span class="badge">✨</span>
+        </div>
+        <h3>Rahidul Alam</h3>
+        <div class="role">Teacher</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="cta-band reveal" data-sparkles="6">
+      <h2>Learn with our team.</h2>
+      <p>Our teachers would love to bring an AI lesson to your library, school, or community group.</p>
+      <a class="btn" href="schedule.html">Schedule a lesson <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand"><img src="images/logo.png" alt=""> TheLearnAI Program</div>
+        <p>North Jersey's largest AI literacy program for children. Playful, hands-on lessons that build real understanding of artificial intelligence.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="staff.html">Our Team</a>
+        <a href="index.html#statistics">Statistics</a>
+        <a href="schedule.html">Schedule a lesson</a>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <a href="schedule.html">Book a lesson</a>
+        <a href="mailto:hello@learnaiprogram.com">hello@learnaiprogram.com</a>
+        <span style="color:rgba(255,255,255,.72);display:block;padding:5px 0">Serving North Jersey</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="yr"></span> TheLearnAI Program</span>
+      <span>Made for the next generation of AI thinkers.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

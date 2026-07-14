@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TheLearnAI Program — AI literacy for kids in North Jersey</title>
+<meta name="description" content="TheLearnAI Program is the largest AI literacy program in North Jersey — hands-on, playful AI lessons that have reached 100+ kids across 7 cities and 3 counties.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="index.html">
+      <img src="images/logo.png" alt="TheLearnAI Program logo">
+      <span>The<b>Learn</b><i>AI</i></span>
+    </a>
+    <button class="nav__toggle" aria-label="Open menu"><span></span></button>
+    <nav class="nav__links">
+      <a href="index.html" class="active">Home</a>
+      <a href="staff.html">Our Team</a>
+      <a href="#statistics">Statistics</a>
+      <a href="schedule.html">Schedule</a>
+      <span class="nav__cta"><a class="btn btn--sm" href="#statistics">Our Impact <span class="arrow">↓</span></a></span>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="head hero" data-sparkles="10">
+  <div class="head__photo" style="background-image:url('images/teach-greenapple.jpg')"></div>
+  <div class="head__wash" style="background:linear-gradient(180deg,rgba(251,250,255,.82),rgba(242,239,255,.9) 45%,rgba(233,250,244,.96))"></div>
+  <canvas class="constellation"></canvas>
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__copy reveal in">
+        <img class="hero__logo" src="images/logo.png" alt="TheLearnAI Program">
+        <h1>Where kids meet <span class="grad">artificial intelligence</span> — and learn to lead it.</h1>
+        <p class="lead">TheLearnAI Program is North Jersey's largest AI literacy program for children: playful, hands-on lessons that turn curiosity about AI into real understanding.</p>
+        <div class="hero__cta">
+          <a class="btn" href="schedule.html">Schedule a lesson <span class="arrow">→</span></a>
+          <a class="btn btn--ghost" href="staff.html">Meet the team</a>
+        </div>
+        <div class="hero__badges">
+          <div class="b"><b>100+</b><span>KIDS TAUGHT</span></div>
+          <div class="b"><b>7</b><span>CITIES</span></div>
+          <div class="b"><b>3</b><span>COUNTIES</span></div>
+        </div>
+      </div>
+      <div class="hero__art reveal in d1">
+        <div class="hero__card">
+          <span class="hero__pill p1"><span class="e">🧠</span> How AI thinks</span>
+          <span class="hero__pill p2"><span class="e">✨</span> Learning live</span>
+          <img src="images/teach-akinator.jpg" alt="Children at a TheLearnAI Program lesson trying an AI guessing game">
+          <div class="cap"><span class="dot"></span><span>A hands-on AI lesson in action</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="pad">
+  <div class="wrap split">
+    <div class="copy reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Big ideas about AI, made for young minds.</h2>
+      <p>Founded in 2024, TheLearnAI Program brings artificial intelligence out of the headlines and into the hands of kids. Through games, live demos, and guided projects, students discover what AI really is, how it makes decisions, and where it gets things wrong.</p>
+      <p>Every session is led in person by trained teachers who make the concepts click — from how a chatbot "guesses" to why a robot might insist that every apple is red. Kids leave able to think about AI with curiosity and confidence, not confusion.</p>
+      <a class="btn btn--pink" href="schedule.html">Bring a lesson to your group <span class="arrow">→</span></a>
+    </div>
+    <div class="photo-stack reveal d1">
+      <span class="ring"></span>
+      <img class="p-a" src="images/teach-cards.jpg" alt="A teacher handing out lesson cards to students">
+      <img class="p-b" src="images/teach-group.jpg" alt="Students working together during a lesson">
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE TEACH -->
+<section class="pad" style="background:linear-gradient(180deg,var(--bg),var(--bg-lav))">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Inside a lesson</span>
+      <h2>Curiosity in, confidence out.</h2>
+      <p>Our lessons are built to be felt, not just heard. Here's what a student takes away.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ico">🤖</div>
+        <h3>How AI works</h3>
+        <p>Students see how machines learn from examples and make predictions — using games and demos they can touch and try themselves.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="ico">🍎</div>
+        <h3>Why AI gets it wrong</h3>
+        <p>Through activities like the robot that thinks every apple is red, kids learn about bias and bad data — and why AI needs careful humans.</p>
+      </div>
+      <div class="card reveal d2">
+        <div class="ico">🚀</div>
+        <h3>Using AI wisely</h3>
+        <p>We build the habits of a responsible AI user: asking good questions, checking answers, and staying curious about how tools really work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Moments</span>
+      <h2>Real classrooms, real kids.</h2>
+    </div>
+    <div class="cards reveal d1">
+      <div class="card" style="padding:0;overflow:hidden"><img src="images/teach-robot.jpg" alt="A lesson about a robot that always says apples are red" style="width:100%;height:260px;object-fit:cover"></div>
+      <div class="card" style="padding:0;overflow:hidden"><img src="images/teach-room.jpg" alt="A What is Artificial Intelligence lesson set up in a library" style="width:100%;height:260px;object-fit:cover"></div>
+      <div class="card" style="padding:0;overflow:hidden"><img src="images/teach-greenapple.jpg" alt="Students discussing an AI lesson about a green apple" style="width:100%;height:260px;object-fit:cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATISTICS -->
+<section class="stats pad" id="statistics" data-sparkles="8">
+  <span class="blob b1"></span><span class="blob b3"></span>
+  <div class="wrap">
+    <div class="banner reveal">
+      <span class="eyebrow" style="justify-content:center">Our impact</span>
+      <h2>The largest AI literacy program in <span class="grad">North Jersey.</span></h2>
+      <p style="max-width:56ch;margin:14px auto 0;font-weight:500;color:var(--ink)">Since 2024 we've brought hands-on AI education to communities across the region — and we're just getting started.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat reveal"><div class="num"><span data-count="100" data-suffix="+">0</span></div><div class="lab">Kids taught</div><div class="sub">and counting</div></div>
+      <div class="stat reveal d1"><div class="num"><span data-count="7">0</span></div><div class="lab">Cities reached</div><div class="sub">across North Jersey</div></div>
+      <div class="stat reveal d2"><div class="num"><span data-count="3">0</span></div><div class="lab">Counties served</div><div class="sub">Passaic · Morris · Bergen</div></div>
+      <div class="stat reveal d3"><div class="num">#1</div><div class="lab">In North Jersey</div><div class="sub">largest of its kind</div></div>
+    </div>
+
+    <div class="chips reveal d1" style="margin-top:44px">
+      <span class="chip"><span class="pin">📍</span> Wayne</span>
+      <span class="chip"><span class="pin">📍</span> Paterson</span>
+      <span class="chip"><span class="pin">📍</span> Little Falls</span>
+      <span class="chip"><span class="pin">📍</span> Pompton Lakes</span>
+      <span class="chip"><span class="pin">📍</span> Pequannock</span>
+      <span class="chip"><span class="pin">📍</span> Totowa</span>
+      <span class="chip"><span class="pin">📍</span> Clifton</span>
+    </div>
+    <div class="counties reveal d2">
+      <span class="county">Passaic County</span><span class="county">Morris County</span><span class="county">Bergen County</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="pad">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Where we've taught</span>
+      <h2>Seven cities and growing.</h2>
+      <p>Every pin is a community where kids have explored AI with us. Tap one to see where.</p>
+    </div>
+    <div class="reveal d1"><div id="map"></div></div>
+    <div class="map-legend reveal d1"><span class="pin">📍</span> Cities where TheLearnAI Program has taught</div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="pad-sm">
+  <div class="wrap">
+    <div class="cta-band reveal" data-sparkles="6">
+      <h2>Want AI lessons for your kids?</h2>
+      <p>Libraries, schools, camps, and community groups across North Jersey partner with us to bring AI literacy to their students. Let's set up a lesson.</p>
+      <a class="btn" href="schedule.html">Schedule a lesson <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand"><img src="images/logo.png" alt=""> TheLearnAI Program</div>
+        <p>North Jersey's largest AI literacy program for children. Playful, hands-on lessons that build real understanding of artificial intelligence.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="staff.html">Our Team</a>
+        <a href="index.html#statistics">Statistics</a>
+        <a href="schedule.html">Schedule a lesson</a>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <a href="schedule.html">Book a lesson</a>
+        <a href="mailto:hello@learnaiprogram.com">hello@learnaiprogram.com</a>
+        <span style="color:rgba(255,255,255,.72);display:block;padding:5px 0">Serving North Jersey</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="yr"></span> TheLearnAI Program</span>
+      <span>Made for the next generation of AI thinkers.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="main.js"></script>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

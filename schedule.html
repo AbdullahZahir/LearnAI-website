@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule a Lesson — TheLearnAI Program</title>
+<meta name="description" content="Request an AI literacy lesson for your library, school, camp, or community group in North Jersey.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="index.html">
+      <img src="images/logo.png" alt="TheLearnAI Program logo">
+      <span>The<b>Learn</b><i>AI</i></span>
+    </a>
+    <button class="nav__toggle" aria-label="Open menu"><span></span></button>
+    <nav class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="staff.html">Our Team</a>
+      <a href="index.html#statistics">Statistics</a>
+      <a href="schedule.html" class="active">Schedule</a>
+      <span class="nav__cta"><a class="btn btn--sm" href="#book">Book now <span class="arrow">↓</span></a></span>
+    </nav>
+  </div>
+</header>
+
+<!-- TITLEHEAD -->
+<section class="head" data-sparkles="9" style="padding:120px 0 84px">
+  <div class="head__photo" style="background-image:url('images/teach-group.jpg')"></div>
+  <div class="head__wash" style="background:linear-gradient(180deg,rgba(233,250,244,.86),rgba(242,239,255,.9) 50%,rgba(251,250,255,.97))"></div>
+  <canvas class="constellation"></canvas>
+  <span class="blob b2"></span><span class="blob b3"></span>
+  <div class="wrap" style="text-align:center;position:relative">
+    <span class="eyebrow" style="justify-content:center">Bring AI to your kids</span>
+    <h1 style="font-size:clamp(2.4rem,5vw,3.8rem);margin-top:14px">Schedule a <span class="grad">lesson.</span></h1>
+    <p style="max-width:54ch;margin:16px auto 0;font-size:1.12rem;font-weight:500;color:var(--ink)">Tell us a little about your group and we'll follow up to plan a hands-on AI lesson that fits.</p>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="pad" id="book">
+  <div class="wrap form-wrap">
+    <!-- FORM -->
+    <div class="form-card reveal">
+      <h2 style="font-size:1.7rem;margin-bottom:6px">Request a lesson</h2>
+      <p style="margin:0 0 24px;color:var(--purple);font-weight:700">It takes about a minute.</p>
+      <form id="scheduleForm" novalidate>
+        <div class="row2">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="org">Organization / school</label>
+            <input id="org" name="org" type="text" placeholder="Wayne Public Library">
+          </div>
+          <div class="field">
+            <label for="city">City / town</label>
+            <input id="city" name="city" type="text" placeholder="Wayne, NJ">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="kids">Number of kids</label>
+            <input id="kids" name="kids" type="number" min="1" placeholder="15">
+          </div>
+          <div class="field">
+            <label for="ages">Age range</label>
+            <select id="ages" name="ages">
+              <option value="">Select an age range</option>
+              <option>5–7 years</option>
+              <option>8–10 years</option>
+              <option>11–13 years</option>
+              <option>14+ years</option>
+              <option>Mixed ages</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="date">Preferred date</label>
+          <input id="date" name="date" type="date">
+        </div>
+        <div class="field">
+          <label for="msg">Anything else we should know?</label>
+          <textarea id="msg" name="msg" placeholder="Tell us about your group, your space, or what you're hoping the kids take away."></textarea>
+        </div>
+        <button class="btn" type="submit" style="width:100%;justify-content:center">Send my request <span class="arrow">→</span></button>
+        <p class="form-note" id="formNote">Your email app will open with the details ready to send.</p>
+      </form>
+    </div>
+
+    <!-- ASIDE -->
+    <div class="reveal d1">
+      <div class="aside-card">
+        <span class="eyebrow">How it works</span>
+        <h3 style="margin-top:12px">From request to lesson</h3>
+        <ul class="aside-list">
+          <li><span class="n">1</span><span>Send your request using the form. Share your group size, ages, and a preferred date.</span></li>
+          <li><span class="n">2</span><span>We reply to plan the details — the right lesson, the timing, and what your space needs.</span></li>
+          <li><span class="n">3</span><span>A trained teacher leads a hands-on AI lesson your kids will remember.</span></li>
+        </ul>
+      </div>
+      <div class="aside-card" style="margin-top:22px;background:linear-gradient(160deg,var(--bg-pink),var(--bg-lav))">
+        <h3>Prefer to email us?</h3>
+        <p style="margin:8px 0 0;font-weight:600">Reach out any time at<br><a href="mailto:hello@learnaiprogram.com" style="color:var(--indigo);font-weight:800">hello@learnaiprogram.com</a></p>
+        <p style="margin:14px 0 0;font-weight:600;color:var(--purple)">Serving libraries, schools, camps, and community groups across North Jersey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand"><img src="images/logo.png" alt=""> TheLearnAI Program</div>
+        <p>North Jersey's largest AI literacy program for children. Playful, hands-on lessons that build real understanding of artificial intelligence.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="staff.html">Our Team</a>
+        <a href="index.html#statistics">Statistics</a>
+        <a href="schedule.html">Schedule a lesson</a>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <a href="schedule.html">Book a lesson</a>
+        <a href="mailto:hello@learnaiprogram.com">hello@learnaiprogram.com</a>
+        <span style="color:rgba(255,255,255,.72);display:block;padding:5px 0">Serving North Jersey</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="yr"></span> TheLearnAI Program</span>
+      <span>Made for the next generation of AI thinkers.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// Build a mailto with all the details — works with no backend on GitHub Pages.
+const form=document.getElementById('scheduleForm');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  const g=id=>document.getElementById(id).value.trim();
+  if(!g('name')||!g('email')){document.getElementById('formNote').textContent='Please add your name and email first.';return;}
+  const lines=[
+    'New lesson request from learnaiprogram.com','',
+    'Name: '+g('name'),
+    'Email: '+g('email'),
+    'Organization / school: '+(g('org')||'—'),
+    'City / town: '+(g('city')||'—'),
+    'Number of kids: '+(g('kids')||'—'),
+    'Age range: '+(g('ages')||'—'),
+    'Preferred date: '+(g('date')||'—'),'',
+    'Notes:',(g('msg')||'—')
+  ];
+  const subject=encodeURIComponent('Lesson request — '+g('name'));
+  const body=encodeURIComponent(lines.join('\n'));
+  window.location.href='mailto:hello@learnaiprogram.com?subject='+subject+'&body='+body;
+  document.getElementById('formNote').textContent='Opening your email app… if nothing happens, email hello@learnaiprogram.com directly.';
+});
+</script>
+</body>
+</html>
