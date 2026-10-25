@@ -131,7 +131,7 @@
     nums.forEach(n => io2.observe(n));
   }
 
-  /* ---------- Map (Leaflet) ---------- */
+  /* ---------- Map (Leaflet + free OpenFreeMap tiles, no API key) ---------- */
   const mapEl = document.getElementById('map');
   if (mapEl && window.L) {
     const cities = [
@@ -143,10 +143,22 @@
       { name: 'Clifton', county: 'Passaic County', lat: 40.8584, lng: -74.1638 },
       { name: 'Pequannock', county: 'Morris County', lat: 40.9762, lng: -74.3046 }
     ];
-    const map = L.map('map', { scrollWheelZoom: false, zoomControl: true }).setView([40.93, -74.23], 11);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 19
-    }).addTo(map);
+    const map = L.map('map', { scrollWheelZoom: false, zoomControl: true, maxZoom: 18 }).setView([40.93, -74.23], 11);
+    const hasWebGL = (() => {
+      try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); }
+      catch (e) { return false; }
+    })();
+    if (L.maplibreGL && hasWebGL) {
+      L.maplibreGL({
+        style: 'https://tiles.openfreemap.org/styles/positron',
+        attributionControl: { customAttribution: '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> Data from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }
+      }).addTo(map);
+    } else {
+      // older browsers without WebGL: plain OpenStreetMap tiles (also free, no key)
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors', maxZoom: 18
+      }).addTo(map);
+    }
 
     const icon = L.divIcon({
       className: 'pin-marker',
